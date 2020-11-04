@@ -42,7 +42,7 @@ namespace Båtuppgiften_WPF_.Classes
 
             foreach (int[] array in Harbour.BoatRegister)
             {
-                HarbourDisplayList.Add($"Kaj {arrayNr}\nPlats        Båttyp            Nr               Vikt            Maxhast               Övrigt\n");
+                HarbourDisplayList.Add($"Kaj {arrayNr}\nPlats        Båttyp            Nr               Vikt            Maxhastighet               Övrigt\n");
 
                 for (int i = 0; i < array.Length; i++)
                 {
