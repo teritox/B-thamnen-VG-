@@ -1,0 +1,19 @@
+﻿<Window x:Name="BoatBox1" x:Class="Båtuppgiften_WPF_.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Båtuppgiften_WPF_"
+        mc:Ignorable="d"
+        Title="Båthamnen" Height="662" Width="950">
+    <Grid Margin="0,0,0,-6">
+        <Button x:Name="NextDayButton" Content="Nästa dag" HorizontalAlignment="Left" Margin="259,446,0,0" VerticalAlignment="Top" Width="91" Height="36" Click="NextDayButton_Click"/>
+        <Button x:Name="Quit" Content="Avsluta" HorizontalAlignment="Left" Margin="259,576,0,0" VerticalAlignment="Top" Height="29" Width="91" Click="Quit_Click"/>
+        <ListBox x:Name="BoatBox2" Margin="382,10,10,39"/>
+        <ListBox x:Name="AnnouncementBox" HorizontalAlignment="Left" Height="213" Margin="30,202,0,0" VerticalAlignment="Top" Width="324"/>
+        <TextBox x:Name="TitelStatistik" HorizontalAlignment="Left" Margin="120,179,0,0" Text="Statistik" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" HorizontalContentAlignment="Center" FontWeight="Bold"/>
+        <ListBox x:Name="BoatHappenings" HorizontalAlignment="Left" Height="104" Margin="30,42,0,0" VerticalAlignment="Top" Width="320"/>
+        <TextBox x:Name="TitelHappenings" HorizontalAlignment="Left" Margin="120,19,0,0" Text="Händelser i hamnen" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+    </Grid>
+
+</Window>
