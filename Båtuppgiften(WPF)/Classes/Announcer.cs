@@ -20,7 +20,7 @@ namespace Båtuppgiften_WPF_.Classes
 
             if (LeavingBoats > 0)
             {
-                BoatTrafficList.Add($"{LeavingBoats} båt/ar lämnade hamnen\n");
+                BoatTrafficList.Add($"{LeavingBoats} båt/ar lämnade hamnen.\n");
             }
             else
             {

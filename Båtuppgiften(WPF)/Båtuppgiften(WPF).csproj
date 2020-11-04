@@ -7,4 +7,15 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="BoatForBåthamnen.png" />
+    <None Remove="Image\BoatForBåthamnen.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Image\BoatForBåthamnen.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
 </Project>

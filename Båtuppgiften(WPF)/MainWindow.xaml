@@ -7,13 +7,24 @@
         mc:Ignorable="d"
         Title="Båthamnen" Height="662" Width="950">
     <Grid Margin="0,0,0,-6">
-        <Button x:Name="NextDayButton" Content="Nästa dag" HorizontalAlignment="Left" Margin="259,446,0,0" VerticalAlignment="Top" Width="91" Height="36" Click="NextDayButton_Click"/>
-        <Button x:Name="Quit" Content="Avsluta" HorizontalAlignment="Left" Margin="259,576,0,0" VerticalAlignment="Top" Height="29" Width="91" Click="Quit_Click"/>
-        <ListBox x:Name="BoatBox2" Margin="382,10,10,39"/>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF324BEC" Offset="0"/>
+                <GradientStop Color="#FD87BDFF" Offset="0.365"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button x:Name="NextDayButton" Content="Nästa dag" HorizontalAlignment="Left" Margin="263,436,0,0" VerticalAlignment="Top" Width="91" Height="36" Click="NextDayButton_Click"/>
+        <Button x:Name="Quit" Content="Avsluta" HorizontalAlignment="Left" Margin="263,575,0,0" VerticalAlignment="Top" Height="29" Width="91" Click="Quit_Click" RenderTransformOrigin="0.527,-0.447"/>
+        <ListBox x:Name="BoatBox2" Margin="382,10,10,27"/>
         <ListBox x:Name="AnnouncementBox" HorizontalAlignment="Left" Height="213" Margin="30,202,0,0" VerticalAlignment="Top" Width="324"/>
-        <TextBox x:Name="TitelStatistik" HorizontalAlignment="Left" Margin="120,179,0,0" Text="Statistik" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" HorizontalContentAlignment="Center" FontWeight="Bold"/>
         <ListBox x:Name="BoatHappenings" HorizontalAlignment="Left" Height="104" Margin="30,42,0,0" VerticalAlignment="Top" Width="320"/>
-        <TextBox x:Name="TitelHappenings" HorizontalAlignment="Left" Margin="120,19,0,0" Text="Händelser i hamnen" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+        <Label Content="Händelser i hamnen" HorizontalAlignment="Left" Margin="120,15,0,0" VerticalAlignment="Top" FontWeight="Bold" Background="White" Height="22" FontSize="11" Width="113"/>
+        <Label Content="Statistik&#xD;&#xA;Statistik" HorizontalAlignment="Left" Margin="127,175,0,0" VerticalAlignment="Top" FontWeight="Bold" Background="White" Height="22" FontSize="11" Width="100" HorizontalContentAlignment="Center"/>
+        <Image x:Name="TinyBoat" HorizontalAlignment="Left" Height="111" Margin="30,504,0,0" VerticalAlignment="Top" Width="111" Source="/Image/BoatForBåthamnen.png"/>
     </Grid>
 
 </Window>

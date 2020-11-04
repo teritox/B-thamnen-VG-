@@ -76,7 +76,7 @@ namespace Båtuppgiften_WPF_.Classes
                 avarageSpeed = (int)Math.Round((avarage / q2.Count()) * 1.852M);
             }
             
-            return $"Båtarnas Medelhastighet är: {avarageSpeed} km/h.\n";
+            return $"Båtarnas medelhastighet är: {avarageSpeed} km/h.\n";
 
         }
 
