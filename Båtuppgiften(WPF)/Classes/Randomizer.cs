@@ -124,7 +124,7 @@ namespace Båtuppgiften_WPF_.Classes
                 case 4:
                     return (new CargoVessel());
                 case 5:
-                    return (new Katamara());
+                    return (new Catamaran());
                 default:
                     return (new Boat());
             }

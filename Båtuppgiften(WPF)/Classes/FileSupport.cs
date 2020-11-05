@@ -40,7 +40,7 @@ namespace Båtuppgiften_WPF_.Classes
                         }
                         else if (keyValue[0].FirstOrDefault() == 'K')
                         {
-                            Harbour.RegisterImportedBoats(new Katamara(keyValue[0], int.Parse(keyValue[1]), decimal.Parse(keyValue[2]), int.Parse(keyValue[3]), int.Parse(keyValue[4]), int.Parse(keyValue[5])));
+                            Harbour.RegisterImportedBoats(new Catamaran(keyValue[0], int.Parse(keyValue[1]), decimal.Parse(keyValue[2]), int.Parse(keyValue[3]), int.Parse(keyValue[4]), int.Parse(keyValue[5])));
                         }
                     }
                     catch (Exception e)
@@ -76,9 +76,9 @@ namespace Båtuppgiften_WPF_.Classes
                     {
                         sw.WriteLine($"{((CargoVessel)boat).Containers}");
                     }
-                    else if (boat is Katamara)
+                    else if (boat is Catamaran)
                     {
-                        sw.WriteLine($"{((Katamara)boat).Beds}");
+                        sw.WriteLine($"{((Catamaran)boat).Beds}");
                     }
 
                 }

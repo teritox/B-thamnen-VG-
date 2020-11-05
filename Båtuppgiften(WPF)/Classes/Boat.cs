@@ -147,10 +147,10 @@ namespace Båtuppgiften_WPF_.Classes
         }
     }
 
-    class Katamara : Boat
+    class Catamaran : Boat
     {
         public int Beds { get; private set; }
-        public Katamara()
+        public Catamaran()
         {
             IdentityNumber = Randomizer.CreateIdentityNumber("K");
             Weight = Randomizer.CreateWeight("K");
@@ -160,7 +160,7 @@ namespace Båtuppgiften_WPF_.Classes
             StaysInHarbourFor = 3;
         }
 
-        public Katamara(string identityNumber, int weight, decimal maxSpeed, int mooredAtNr, int landing, int beds)
+        public Catamaran(string identityNumber, int weight, decimal maxSpeed, int mooredAtNr, int landing, int beds)
         {
             IdentityNumber = identityNumber;
             Weight = weight;
@@ -175,7 +175,7 @@ namespace Båtuppgiften_WPF_.Classes
 
         public override string ToString()
         {
-            return $"{MooredAtNr} - {MooredAtNr + 2}      Katamara     {IdentityNumber}           {Weight}             {Math.Round(MaxSpeed * 1.852M)} km/h         Antal bäddplaster: {Beds}st";
+            return $"{MooredAtNr} - {MooredAtNr + 2}      Katamaran    {IdentityNumber}           {Weight}             {Math.Round(MaxSpeed * 1.852M)} km/h         Antal bäddplaster: {Beds}st";
         }
     }
 

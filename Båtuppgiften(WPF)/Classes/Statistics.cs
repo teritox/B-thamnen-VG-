@@ -41,7 +41,7 @@ namespace Båtuppgiften_WPF_.Classes
             }
 
             return $"I hamnen finns det : {rowboats}st roddbåtar, {motorboats}st motorbåtar,\n {sailingboats}st segelbåtar, " +
-                $"{cargoVessels}st lastfartyg och {katamaras}st katamaror.\n";
+                $"{cargoVessels}st lastfartyg och {katamaras}st katamaraner.\n";
         }
 
         public static string TotalWeight()
