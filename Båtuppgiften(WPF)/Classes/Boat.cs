@@ -27,11 +27,11 @@ namespace Båtuppgiften_WPF_.Classes
         public int MaxAmountOfPassengers { get; private set; }
         public Rowboat()
         {
-            IdentityNumber = PropRandomizer.CreateIdentityNumber("R");
-            Weight = PropRandomizer.CreateWeight("R");
-            MaxSpeed = PropRandomizer.CreateMaxSpeed("R");
+            IdentityNumber = Randomizer.CreateIdentityNumber("R");
+            Weight = Randomizer.CreateWeight("R");
+            MaxSpeed = Randomizer.CreateMaxSpeed("R");
             NeededSpace = 1;
-            MaxAmountOfPassengers = PropRandomizer.CreatePassangerCapacity();
+            MaxAmountOfPassengers = Randomizer.CreatePassangerCapacity();
             StaysInHarbourFor = 1;
         }
 
@@ -59,11 +59,11 @@ namespace Båtuppgiften_WPF_.Classes
         public int Horsepower { get; private set; }
         public Motorboat()
         {
-            IdentityNumber = PropRandomizer.CreateIdentityNumber("M");
-            Weight = PropRandomizer.CreateWeight("M");
-            MaxSpeed = PropRandomizer.CreateMaxSpeed("M");
+            IdentityNumber = Randomizer.CreateIdentityNumber("M");
+            Weight = Randomizer.CreateWeight("M");
+            MaxSpeed = Randomizer.CreateMaxSpeed("M");
             NeededSpace = 1;
-            Horsepower = PropRandomizer.CreateHorsepower();
+            Horsepower = Randomizer.CreateHorsepower();
             StaysInHarbourFor = 3;
         }
 
@@ -90,11 +90,11 @@ namespace Båtuppgiften_WPF_.Classes
         public int Length { get; private set; }
         public Sailingboat()
         {
-            IdentityNumber = PropRandomizer.CreateIdentityNumber("S");
-            Weight = PropRandomizer.CreateWeight("S");
-            MaxSpeed = PropRandomizer.CreateMaxSpeed("S");
+            IdentityNumber = Randomizer.CreateIdentityNumber("S");
+            Weight = Randomizer.CreateWeight("S");
+            MaxSpeed = Randomizer.CreateMaxSpeed("S");
             NeededSpace = 2;
-            Length = PropRandomizer.CreateLength();
+            Length = Randomizer.CreateLength();
             StaysInHarbourFor = 4;
         }
 
@@ -121,11 +121,11 @@ namespace Båtuppgiften_WPF_.Classes
         public int Containers { get; private set; }
         public CargoVessel()
         {
-            IdentityNumber = PropRandomizer.CreateIdentityNumber("L");
-            Weight = PropRandomizer.CreateWeight("L");
-            MaxSpeed = PropRandomizer.CreateMaxSpeed("L");
+            IdentityNumber = Randomizer.CreateIdentityNumber("L");
+            Weight = Randomizer.CreateWeight("L");
+            MaxSpeed = Randomizer.CreateMaxSpeed("L");
             NeededSpace = 4;
-            Containers = PropRandomizer.CreateContainerCapacity();
+            Containers = Randomizer.CreateContainerCapacity();
             StaysInHarbourFor = 6;
         }
 
@@ -152,11 +152,11 @@ namespace Båtuppgiften_WPF_.Classes
         public int Beds { get; private set; }
         public Katamara()
         {
-            IdentityNumber = PropRandomizer.CreateIdentityNumber("K");
-            Weight = PropRandomizer.CreateWeight("K");
-            MaxSpeed = PropRandomizer.CreateMaxSpeed("K");
+            IdentityNumber = Randomizer.CreateIdentityNumber("K");
+            Weight = Randomizer.CreateWeight("K");
+            MaxSpeed = Randomizer.CreateMaxSpeed("K");
             NeededSpace = 3;
-            Beds = PropRandomizer.CreateBeds();
+            Beds = Randomizer.CreateBeds();
             StaysInHarbourFor = 3;
         }
 

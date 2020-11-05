@@ -117,7 +117,7 @@ namespace Båtuppgiften_WPF_.Classes
         {
             for (int i = 0; i < 5; i++)
             {
-                NewBoats.Add(Utility.RandomBoat());
+                NewBoats.Add(Randomizer.RandomBoat());
             }
         }
 
@@ -151,5 +151,7 @@ namespace Båtuppgiften_WPF_.Classes
                 boat.DaysInHarbour++;
             }
         }
+
+       
     }
 }

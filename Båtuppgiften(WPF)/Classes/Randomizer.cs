@@ -5,7 +5,7 @@ using System.Text;
 namespace Båtuppgiften_WPF_.Classes
 {
     //Creates a random identitynumber for the boat. If the number already is in use by another boat in the harbour a new one will be created.
-    class PropRandomizer
+    class Randomizer
     {
         public static Random r = new Random();
         public static string RandomIdentityNumber()
@@ -27,9 +27,22 @@ namespace Båtuppgiften_WPF_.Classes
             {
                 iDNumber += "-" + RandomIdentityNumber();
 
-            } while (iDNumber.Exists());
+            } while (Exists(iDNumber));
 
             return iDNumber;
+        }
+
+        public static bool Exists(string s)
+        {
+            foreach (Boat boat in Harbour.BoatsInHarbour)
+            {
+                if (boat.IdentityNumber == s)
+                {
+                    return true;
+                }
+
+            }
+            return false;
         }
 
         public static int CreateWeight(string s)
@@ -93,6 +106,28 @@ namespace Båtuppgiften_WPF_.Classes
         public static int CreateBeds()
         {
             return r.Next(1, 4 + 1);
+        }
+
+        public static Boat RandomBoat()
+        {
+            Random r = new Random();
+            int rnd = r.Next(1, 5 + 1);
+
+            switch (rnd)
+            {
+                case 1:
+                    return (new Rowboat());
+                case 2:
+                    return (new Motorboat());
+                case 3:
+                    return (new Sailingboat());
+                case 4:
+                    return (new CargoVessel());
+                case 5:
+                    return (new Katamara());
+                default:
+                    return (new Boat());
+            }
         }
     }
 }
