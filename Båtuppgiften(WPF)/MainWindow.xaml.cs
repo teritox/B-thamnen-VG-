@@ -31,8 +31,8 @@ namespace Båtuppgiften_WPF_
             Announcer.CreateHarbourDisplayList();
             BoatBox2.ItemsSource = Announcer.HarbourDisplayList;
 
-            Statistics.CreateStatisticsList();
-            AnnouncementBox.ItemsSource = Statistics.AnnouncementList;     
+            Announcer.CreateStatisticsList();
+            AnnouncementBox.ItemsSource = Announcer.StatisticsList;     
             
             Announcer.CreateBoatTrafficList();
             BoatHappenings.ItemsSource = Announcer.BoatTrafficList;           
@@ -48,7 +48,7 @@ namespace Båtuppgiften_WPF_
             Announcer.CreateHarbourDisplayList();
             BoatBox2.Items.Refresh();
 
-            Statistics.CreateStatisticsList();
+            Announcer.CreateStatisticsList();
             AnnouncementBox.Items.Refresh();
 
             Announcer.CreateBoatTrafficList();

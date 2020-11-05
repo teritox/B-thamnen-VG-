@@ -14,6 +14,8 @@ namespace Båtuppgiften_WPF_.Classes
 
         public static List<string> BoatTrafficList = new List<string>();
 
+        public static List<string> StatisticsList = new List<string>();
+
         public static void CreateBoatTrafficList()
         {
             BoatTrafficList.Clear();
@@ -64,6 +66,19 @@ namespace Båtuppgiften_WPF_.Classes
                 HarbourDisplayList.Add("\n");
                 arrayNr++;
             }
+        }
+
+        //Creates list for Listview or similar with the different methods in this class. 
+        public static void CreateStatisticsList()
+        {
+            StatisticsList.Clear();
+
+            StatisticsList.Add(Statistics.BoatsPerType());
+            StatisticsList.Add(Statistics.TotalWeight());
+            StatisticsList.Add(Statistics.AvarageSpeed());
+            StatisticsList.Add(Statistics.FreeSpacesInHarbour());
+            StatisticsList.Add(Statistics.TotalOfTurnedAwayBoats());
+
         }
 
         public static void Reset()

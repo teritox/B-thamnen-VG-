@@ -9,10 +9,8 @@ namespace Båtuppgiften_WPF_.Classes
     {
         public static int TurnedAwayTotal { get; set; }
 
-        public static List<string> AnnouncementList = new List<string>();
-
         //Counts all the boats per type in the harbour.
-        private static string BoatsPerType()
+        public static string BoatsPerType()
         {
 
             int rowboats = 0, motorboats = 0, sailingboats = 0, cargoVessels = 0, katamaras = 0;
@@ -46,7 +44,7 @@ namespace Båtuppgiften_WPF_.Classes
                 $"{cargoVessels}st lastfartyg och {katamaras}st katamaror.\n";
         }
 
-        private static string TotalWeight()
+        public static string TotalWeight()
         {
             int sum = 0;
 
@@ -58,7 +56,7 @@ namespace Båtuppgiften_WPF_.Classes
             return $"Alla båtarna i hamnen väger {sum}kg tillsammans.\n";
         }
 
-        private static string AvarageSpeed()
+        public static string AvarageSpeed()
         {
             var q2 = Harbour.BoatsInHarbour
                 .Select(b => b.MaxSpeed);
@@ -80,7 +78,7 @@ namespace Båtuppgiften_WPF_.Classes
 
         }
 
-        private static string FreeSpacesInHarbour()
+        public static string FreeSpacesInHarbour()
         {
             int spaces = 0;
             foreach (int[] array in Harbour.BoatRegister)
@@ -97,22 +95,10 @@ namespace Båtuppgiften_WPF_.Classes
             return $"Det finns {spaces}st lediga plaster i hamnen.\n";
         }
 
-        private static string TotalOfTurnedAwayBoats()
+        public static string TotalOfTurnedAwayBoats()
         {
             return $"Total mängd avvisade båtar: {TurnedAwayTotal}.";
         }
-
-        //Creates list for Listview or similar with the different methods in this class. 
-        public static void CreateStatisticsList()
-        {
-            AnnouncementList.Clear();
-
-            AnnouncementList.Add(BoatsPerType());
-            AnnouncementList.Add(TotalWeight());
-            AnnouncementList.Add(AvarageSpeed());
-            AnnouncementList.Add(FreeSpacesInHarbour());
-            AnnouncementList.Add(TotalOfTurnedAwayBoats());
-
-        }
+        
     }
 }
