@@ -22,9 +22,9 @@
         <ListBox x:Name="BoatBox2" Margin="382,10,10,27"/>
         <ListBox x:Name="AnnouncementBox" HorizontalAlignment="Left" Height="213" Margin="30,202,0,0" VerticalAlignment="Top" Width="324"/>
         <ListBox x:Name="BoatHappenings" HorizontalAlignment="Left" Height="104" Margin="30,42,0,0" VerticalAlignment="Top" Width="320"/>
-        <Label Content="Händelser i hamnen" HorizontalAlignment="Left" Margin="120,15,0,0" VerticalAlignment="Top" FontWeight="Bold" Background="White" Height="22" FontSize="11" Width="113"/>
-        <Label Content="Statistik&#xD;&#xA;Statistik" HorizontalAlignment="Left" Margin="127,175,0,0" VerticalAlignment="Top" FontWeight="Bold" Background="White" Height="22" FontSize="11" Width="100" HorizontalContentAlignment="Center"/>
         <Image x:Name="TinyBoat" HorizontalAlignment="Left" Height="111" Margin="30,504,0,0" VerticalAlignment="Top" Width="111" Source="/Image/BoatForBåthamnen.png"/>
+        <Label x:Name="Händelser" Content="Händelser i hamnen" HorizontalAlignment="Left" Margin="117,11,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Statistik&#xD;&#xA;" HorizontalAlignment="Left" Margin="153,174,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
     </Grid>
 
 </Window>
