@@ -24,7 +24,9 @@ namespace Båtuppgiften_WPF_
         public MainWindow()
         {
             InitializeComponent();
-            
+            this.FontFamily = new FontFamily("Consolas");
+
+
             Harbour.CreateHarbour();
             FileSupport.ImportBoatsFromFile();
 

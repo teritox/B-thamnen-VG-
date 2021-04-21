@@ -31,7 +31,7 @@ namespace Båtuppgiften_WPF_.Classes
 
             if (TurnedAwayBoats > 0)
             {
-                BoatTrafficList.Add($"{TurnedAwayBoats} båt/ar fick inte plats i hamnen och seglade vidare.");
+                BoatTrafficList.Add($"{TurnedAwayBoats} båt/ar fick inte plats i hamnen och \nseglade vidare.");
             }
 
         }
@@ -44,13 +44,13 @@ namespace Båtuppgiften_WPF_.Classes
 
             foreach (int[] array in Harbour.BoatRegister)
             {
-                HarbourDisplayList.Add($"Kaj {arrayNr}\nPlats        Båttyp            Nr               Vikt            Maxhastighet               Övrigt\n");
+                HarbourDisplayList.Add(string.Format($"{"Kaj " + arrayNr,40}\n\n{"Plats",0} {"Båttyp",14} {"Nr",8} {"Vikt",11} {"Maxhastighet",15} {"Övrigt", 15}\n"));
 
                 for (int i = 0; i < array.Length; i++)
                 {
                     if (array[i] == 0)
                     {
-                        HarbourDisplayList.Add($"{i + 1} Tomt");
+                        HarbourDisplayList.Add(string.Format($"{i + 1,-11} {"Tomt"}"));
                     }
                     else
                     {

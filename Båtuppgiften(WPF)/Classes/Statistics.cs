@@ -40,7 +40,7 @@ namespace Båtuppgiften_WPF_.Classes
 
             }
 
-            return $"I hamnen finns det : {rowboats}st roddbåtar, {motorboats}st motorbåtar,\n {sailingboats}st segelbåtar, " +
+            return $"I hamnen finns det : \n{rowboats}st roddbåtar, {motorboats}st motorbåtar,{sailingboats}st segelbåtar,\n" +
                 $"{cargoVessels}st lastfartyg och {katamaras}st katamaraner.\n";
         }
 
@@ -53,7 +53,7 @@ namespace Båtuppgiften_WPF_.Classes
                 sum += boat.Weight;
             }
 
-            return $"Alla båtarna i hamnen väger {sum}kg tillsammans.\n";
+            return $"Alla båtarna i hamnen väger {sum}kg \ntillsammans.";
         }
 
         public static string AvarageSpeed()

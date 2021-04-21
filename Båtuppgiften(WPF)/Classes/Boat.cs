@@ -49,7 +49,10 @@ namespace Båtuppgiften_WPF_.Classes
 
         public override string ToString()
         {
-            return $"{MooredAtNr}            Roddbåt        {IdentityNumber}            {Weight}            {Math.Round(MaxSpeed * 1.852M)} km/h        Max Antal plastser: {MaxAmountOfPassengers}";
+            //return String.Format("{0,-16} {1,-12} {2,-15} {3,-12} {4,-15}",$"{MooredAtNr}", "Roddbåt", $"{IdentityNumber}", $"{Weight}", 
+            //    $"{Math.Round(MaxSpeed * 1.852M)} km/h", $"Max Antal plastser: {MaxAmountOfPassengers}");
+            return string.Format($"{MooredAtNr,-11} {"Roddbåt",-12} {IdentityNumber} {Weight + " kg",11} " +
+                $"{Math.Round(MaxSpeed * 1.852M) + " km/h",12} {"Max Antal plastser: " + MaxAmountOfPassengers,25}");
         }
     }
 
@@ -81,7 +84,9 @@ namespace Båtuppgiften_WPF_.Classes
 
         public override string ToString()
         {
-            return $"{MooredAtNr}           Motorbåt       {IdentityNumber}           {Weight}           {Math.Round(MaxSpeed * 1.852M)} km/h        Hästkrafter: {Horsepower}";
+            //return $"{MooredAtNr}           Motorbåt       {IdentityNumber}           {Weight}           {Math.Round(MaxSpeed * 1.852M)} km/h        Hästkrafter: {Horsepower}";
+            return string.Format($"{MooredAtNr,-11} {"Motorbåt",-12} {IdentityNumber} {Weight + " kg",11} " +
+                $"{Math.Round(MaxSpeed * 1.852M) + " km/h",12} {"Hästkrafter: " + Horsepower,25}");
         }
     }
 
@@ -112,7 +117,9 @@ namespace Båtuppgiften_WPF_.Classes
 
         public override string ToString()
         {
-            return $"{MooredAtNr} - {MooredAtNr + 1}     Segelbåt        {IdentityNumber}           {Weight}            {Math.Round(MaxSpeed * 1.852M)} km/h         Båtlängd: {Length}m";
+            //return $"{MooredAtNr} - {MooredAtNr + 1}     Segelbåt        {IdentityNumber}           {Weight}            {Math.Round(MaxSpeed * 1.852M)} km/h         Båtlängd: {Length}m";
+            return string.Format($"{MooredAtNr + " - " + (MooredAtNr + 1),-11} {"Segelbåt",-12} {IdentityNumber} {Weight + " kg",11} " +
+                $"{Math.Round(MaxSpeed * 1.852M) + " km/h",12} {"Båtlängd: " + Length + "m",25}");
         }
     }
 
@@ -143,7 +150,9 @@ namespace Båtuppgiften_WPF_.Classes
 
         public override string ToString()
         {
-            return $"{MooredAtNr} - {MooredAtNr + 3}      Lastfartyg     {IdentityNumber}          {Weight}           {Math.Round(MaxSpeed * 1.852M)} km/h         Containers: {Containers}st";
+            //return $"{MooredAtNr} - {MooredAtNr + 3}      Lastfartyg     {IdentityNumber}          {Weight}           {Math.Round(MaxSpeed * 1.852M)} km/h         Containers: {Containers}st";
+            return string.Format($"{MooredAtNr + " - " + (MooredAtNr + 3),-11} {"Lastfartyg",-12} {IdentityNumber} {Weight + " kg",11} " +
+                $"{Math.Round(MaxSpeed * 1.852M) + " km/h",12} {"Containers: " + Containers + "st",25}");
         }
     }
 
@@ -175,7 +184,9 @@ namespace Båtuppgiften_WPF_.Classes
 
         public override string ToString()
         {
-            return $"{MooredAtNr} - {MooredAtNr + 2}      Katamaran    {IdentityNumber}           {Weight}             {Math.Round(MaxSpeed * 1.852M)} km/h         Antal bäddplaster: {Beds}st";
+            //return $"{MooredAtNr} - {MooredAtNr + 2}      Katamaran    {IdentityNumber}           {Weight}             {Math.Round(MaxSpeed * 1.852M)} km/h         Antal bäddplaster: {Beds}st";
+            return string.Format($"{MooredAtNr + " - " + (MooredAtNr + 2),-11} {"Katamaran",-12} {IdentityNumber} {Weight + " kg",11} " +
+                $"{Math.Round(MaxSpeed * 1.852M)+ " km/h",12} {"Antal bäddplaster: " + Beds + "st",25}");
         }
     }
 
